@@ -1,0 +1,359 @@
+(1) A copy of the output from the find command
+------------------------------------------------------
+joel@joel-VirtualBox:~/Documents$ find
+./copy-of-fruits
+./copy-of-fruits/banana
+./copy-of-fruits/apricot
+./copy-of-fruits/apple
+./planets.zip
+./fruits
+./fruits/banana
+./fruits/apricot
+./fruits/apple
+
+(2) A copy of the command history
+history command and paste only the challenge-related lines into the Gist
+------------------------------------------------------------------------------
+joel@joel-VirtualBox:~/Documents$ unzip planets.zip
+Archive:  planets.zip
+   creating: planets/
+  inflating: planets/mercury.jpeg    
+  inflating: planets/earth.jpeg      
+  inflating: planets/pluto.jpeg      
+  inflating: planets/arrakis.jpeg    
+  inflating: planets/jupiter.jpeg    
+  inflating: planets/venus.jpeg      
+  inflating: planets/mars.jpeg       
+  inflating: planets/cybertron.jpeg  
+  inflating: planets/coruscant.jpeg  
+  inflating: planets/uranus.jpeg     
+  inflating: planets/neptune.jpeg    
+  inflating: planets/saturn.jpeg     
+joel@joel-VirtualBox:~/Documents$ ls
+cmd.odt  fwunixref.pdf  planets  planets.zip
+joel@joel-VirtualBox:~/Documents$ cd planets
+joel@joel-VirtualBox:~/Documents/planets$ ls
+arrakis.jpeg    earth.jpeg    mercury.jpeg  saturn.jpeg
+coruscant.jpeg  jupiter.jpeg  neptune.jpeg  uranus.jpeg
+cybertron.jpeg  mars.jpeg     pluto.jpeg    venus.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ mkdir real
+joel@joel-VirtualBox:~/Documents/planets$ mkdir fictional
+joel@joel-VirtualBox:~/Documents/planets$ mkdir inhabited
+joel@joel-VirtualBox:~/Documents/planets$ cd real
+joel@joel-VirtualBox:~/Documents/planets/real$ ls
+joel@joel-VirtualBox:~/Documents/planets/real$ mkdir terrestrial
+joel@joel-VirtualBox:~/Documents/planets/real$ mkdir gas-giants
+joel@joel-VirtualBox:~/Documents/planets/real$ mkdir dwarf-planets
+joel@joel-VirtualBox:~/Documents/planets/real$ ls
+dwarf-planets  gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets/real$ cd..
+cd..: command not found
+joel@joel-VirtualBox:~/Documents/planets/real$ cd ..
+joel@joel-VirtualBox:~/Documents/planets$ ls
+arrakis.jpeg    earth.jpeg  jupiter.jpeg  neptune.jpeg  saturn.jpeg
+coruscant.jpeg  fictional   mars.jpeg     pluto.jpeg    uranus.jpeg
+cybertron.jpeg  inhabited   mercury.jpeg  real          venus.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ mv earth.jpg real/terrestrial
+mv: cannot stat 'earth.jpg': No such file or directory
+joel@joel-VirtualBox:~/Documents/planets$ mv earth.jpg real/terrestrial/earth.jpg
+mv: cannot stat 'earth.jpg': No such file or directory
+joel@joel-VirtualBox:~/Documents/planets$ ls
+arrakis.jpeg    earth.jpeg  jupiter.jpeg  neptune.jpeg  saturn.jpeg
+coruscant.jpeg  fictional   mars.jpeg     pluto.jpeg    uranus.jpeg
+cybertron.jpeg  inhabited   mercury.jpeg  real          venus.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ mv earth.jpeg real/terrestrial/earth.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ pwd
+/home/joel/Documents/planets
+joel@joel-VirtualBox:~/Documents/planets$ ls
+arrakis.jpeg  coruscant.jpeg  cybertron.jpeg  fictional  inhabited  jupiter.jpeg  mars.jpeg  mercury.jpeg  neptune.jpeg  pluto.jpeg  real  saturn.jpeg  uranus.jpeg  venus.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ cd real
+joel@joel-VirtualBox:~/Documents/planets/real$ ls
+dwarf-planets  gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets/real$ cd terrestrial/
+joel@joel-VirtualBox:~/Documents/planets/real/terrestrial$ ls
+earth.jpeg
+joel@joel-VirtualBox:~/Documents/planets/real/terrestrial$ cd ..
+joel@joel-VirtualBox:~/Documents/planets/real$ cd ..
+joel@joel-VirtualBox:~/Documents/planets$ ls
+arrakis.jpeg  coruscant.jpeg  cybertron.jpeg  fictional  inhabited  jupiter.jpeg  mars.jpeg  mercury.jpeg  neptune.jpeg  pluto.jpeg  real  saturn.jpeg  uranus.jpeg  venus.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ ls
+arrakis.jpeg  coruscant.jpeg  cybertron.jpeg  fictional  inhabited  jupiter.jpeg  mars.jpeg  mercury.jpeg  neptune.jpeg  pluto.jpeg  real  saturn.jpeg  uranus.jpeg  venus.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ cp jupiter.jped real/inhabited/jupiter.jpeg
+cp: cannot stat 'jupiter.jped': No such file or directory
+joel@joel-VirtualBox:~/Documents/planets$ cp jupiter.jped real/inhabited/jupiter.jpeg
+cp: cannot stat 'jupiter.jped': No such file or directory
+joel@joel-VirtualBox:~/Documents/planets$ cp jupiter.jpeg real/inhabited/jupiter.jpeg
+cp: cannot create regular file 'real/inhabited/jupiter.jpeg': No such file or directory
+joel@joel-VirtualBox:~/Documents/planets$ mv jupiter.jpeg real/inhabited/jupiter.jpeg
+mv: cannot move 'jupiter.jpeg' to 'real/inhabited/jupiter.jpeg': No such file or directory
+joel@joel-VirtualBox:~/Documents/planets$ mv jupiter.jpeg inhabited/jupiter.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ cd inhabited
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ cd ..
+joel@joel-VirtualBox:~/Documents/planets$ ls inhabited
+jupiter.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ ls
+arrakis.jpeg  coruscant.jpeg  cybertron.jpeg  fictional  inhabited  mars.jpeg  mercury.jpeg  neptune.jpeg  pluto.jpeg  real  saturn.jpeg  uranus.jpeg  venus.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ mv mars.jpeg inhabited/mars.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ mv mercury.jpeg inhabited/mercury.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ mv neptune.jpeg inhabited/neptune.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ pluto.jpeg inhabited/pluto.jpeg
+pluto.jpeg: command not found
+joel@joel-VirtualBox:~/Documents/planets$ mv pluto.jpeg inhabited/pluto.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ staurn.jpeg inhabited/saturn.jpeg
+staurn.jpeg: command not found
+joel@joel-VirtualBox:~/Documents/planets$ mv staurn.jpeg inhabited/saturn.jpeg
+mv: cannot stat 'staurn.jpeg': No such file or directory
+joel@joel-VirtualBox:~/Documents/planets$ mv saturn.jpeg inhabited/saturn.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ mv uranus.jpeg inhabited/uranus.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ venus.jpeg inhabited/ven 
+arrakis.jpeg    coruscant.jpeg  cybertron.jpeg  fictional/      inhabited/      real/           venus.jpeg      
+joel@joel-VirtualBox:~/Documents/planets$ venus.jpeg inhabited/venus.jpeg
+venus.jpeg: command not found
+joel@joel-VirtualBox:~/Documents/planets$ mv venus.jpeg inhabited/venus.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ ls
+arrakis.jpeg  coruscant.jpeg  cybertron.jpeg  fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ mv arrakis.jpeg fictional/arrakis.kpeg 
+joel@joel-VirtualBox:~/Documents/planets$ mv coruscant.jpeg fictional/coruscant.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ mv cybertron.jpeg fictional/cybertron.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ cd real
+joel@joel-VirtualBox:~/Documents/planets/real$ ls
+dwarf-planets  gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets/real$ cd..
+cd..: command not found
+joel@joel-VirtualBox:~/Documents/planets/real$ cd ..
+joel@joel-VirtualBox:~/Documents/planets$ cd inhabited
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ ls
+jupiter.jpeg  mars.jpeg  mercury.jpeg  neptune.jpeg  pluto.jpeg  saturn.jpeg  uranus.jpeg  venus.jpeg
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ rm pluto.jpeg
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ ls
+jupiter.jpeg  mars.jpeg  mercury.jpeg  neptune.jpeg  saturn.jpeg  uranus.jpeg  venus.jpeg
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ cd..
+cd..: command not found
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ cd ..
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ cd fictional/
+joel@joel-VirtualBox:~/Documents/planets/fictional$ ls
+arrakis.kpeg  coruscant.jpeg  cybertron.jpeg
+joel@joel-VirtualBox:~/Documents/planets/fictional$ cd ..
+joel@joel-VirtualBox:~/Documents/planets$ cd real
+joel@joel-VirtualBox:~/Documents/planets/real$ ls
+dwarf-planets  gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets/real$ ls
+dwarf-planets  gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets/real$ cd terrestrial
+joel@joel-VirtualBox:~/Documents/planets/real/terrestrial$ ls
+earth.jpeg
+joel@joel-VirtualBox:~/Documents/planets/real/terrestrial$ cd..
+cd..: command not found
+joel@joel-VirtualBox:~/Documents/planets/real/terrestrial$ cd ..
+joel@joel-VirtualBox:~/Documents/planets/real$ cd ..
+joel@joel-VirtualBox:~/Documents/planets$ ls inhabited
+jupiter.jpeg  mars.jpeg  mercury.jpeg  neptune.jpeg  saturn.jpeg  uranus.jpeg  venus.jpeg
+joel@joel-VirtualBox:~/Documents/planets$ cd ..
+joel@joel-VirtualBox:~/Documents$ ls
+cmd.odt  fwunixref.pdf  planets  planets.zip
+joel@joel-VirtualBox:~/Documents$ cd planets
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ cd inh
+bash: cd: inh: No such file or directory
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ cd real
+joel@joel-VirtualBox:~/Documents/planets/real$ ls
+dwarf-planets  gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets/real$ rm -r dwarf-planets/
+joel@joel-VirtualBox:~/Documents/planets/real$ ls
+gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets/real$ cd..
+cd..: command not found
+joel@joel-VirtualBox:~/Documents/planets/real$ ls
+gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets/real$ cd ..
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ cd inhabited
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ ls
+jupiter.jpeg  mars.jpeg  mercury.jpeg  neptune.jpeg  saturn.jpeg  uranus.jpeg  venus.jpeg
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ rm jupier.
+rm: cannot remove 'jupier.': No such file or directory
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ rm jupiter.jpeg ../real
+rm: cannot remove '../real': Is a directory
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ rm jupiter.jpeg ../real/gas-giants/jupiter.jpeg
+rm: cannot remove 'jupiter.jpeg': No such file or directory
+rm: cannot remove '../real/gas-giants/jupiter.jpeg': No such file or directory
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ mv  jupiter.jpeg ../real/gas-giants/jupiter.jpeg
+mv: cannot stat 'jupiter.jpeg': No such file or directory
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ pwd
+/home/joel/Documents/planets/inhabited
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ cd ..
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ cd inhabited/
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ ls
+mars.jpeg  mercury.jpeg  neptune.jpeg  saturn.jpeg  uranus.jpeg  venus.jpeg
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ cd ..
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ ls real
+gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets$ ls gas-giants
+ls: cannot access 'gas-giants': No such file or directory
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ ls real
+gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets$ ls gas-giants
+ls: cannot access 'gas-giants': No such file or directory
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ ls real
+gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ ls real
+gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ ls real/
+gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ ks /real
+ks: command not found
+joel@joel-VirtualBox:~/Documents/planets$ cd real*
+joel@joel-VirtualBox:~/Documents/planets/real$ cd real
+bash: cd: real: No such file or directory
+joel@joel-VirtualBox:~/Documents/planets/real$ ls
+gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets/real$ cd gas-giants/
+joel@joel-VirtualBox:~/Documents/planets/real/gas-giants$ ls
+joel@joel-VirtualBox:~/Documents/planets/real/gas-giants$ ls
+joel@joel-VirtualBox:~/Documents/planets/real/gas-giants$ cd 
+joel@joel-VirtualBox:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  planets.zip  Public  snap  Templates  Videos
+joel@joel-VirtualBox:~$ cd plantes
+bash: cd: plantes: No such file or directory
+joel@joel-VirtualBox:~$ cd planets
+bash: cd: planets: No such file or directory
+joel@joel-VirtualBox:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  planets.zip  Public  snap  Templates  Videos
+joel@joel-VirtualBox:~$ ce planets
+ce: command not found
+joel@joel-VirtualBox:~$ cd planets
+bash: cd: planets: No such file or directory
+joel@joel-VirtualBox:~$ cd planets
+bash: cd: planets: No such file or directory
+joel@joel-VirtualBox:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  planets.zip  Public  snap  Templates  Videos
+joel@joel-VirtualBox:~$ cd planets
+bash: cd: planets: No such file or directory
+joel@joel-VirtualBox:~$ cd /planets
+bash: cd: /planets: No such file or directory
+joel@joel-VirtualBox:~$ cd Documents/
+joel@joel-VirtualBox:~/Documents$ ls
+cmd.odt  fwunixref.pdf  planets  planets.zip
+joel@joel-VirtualBox:~/Documents$ cd planets/
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ ce real/
+ce: command not found
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ cd real
+joel@joel-VirtualBox:~/Documents/planets/real$ ls
+gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets/real$ cd 
+joel@joel-VirtualBox:~$ cd 
+joel@joel-VirtualBox:~$ cd..
+cd..: command not found
+joel@joel-VirtualBox:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  planets.zip  Public  snap  Templates  Videos
+joel@joel-VirtualBox:~$ cd Do
+Documents/ Downloads/ 
+joel@joel-VirtualBox:~$ cd Do
+Documents/ Downloads/ 
+joel@joel-VirtualBox:~$ cd D
+Desktop/   Documents/ Downloads/ 
+joel@joel-VirtualBox:~$ cd D
+bash: cd: D: No such file or directory
+joel@joel-VirtualBox:~$ cd FDocuments
+bash: cd: FDocuments: No such file or directory
+joel@joel-VirtualBox:~$ cd Documents
+joel@joel-VirtualBox:~/Documents$ ls
+cmd.odt  fwunixref.pdf  planets  planets.zip
+joel@joel-VirtualBox:~/Documents$ cd planets
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ cd inhabited
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ cd inhabited
+bash: cd: inhabited: No such file or directory
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ cd inhabited
+bash: cd: inhabited: No such file or directory
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ ls
+mars.jpeg  mercury.jpeg  neptune.jpeg  saturn.jpeg  uranus.jpeg  venus.jpeg
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ cd..
+cd..: command not found
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ cd ..
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ cd inhabited
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ ls
+mars.jpeg  mercury.jpeg  neptune.jpeg  saturn.jpeg  uranus.jpeg  venus.jpeg
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ cd ..
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ cd real
+joel@joel-VirtualBox:~/Documents/planets/real$ cd gas-giants/
+joel@joel-VirtualBox:~/Documents/planets/real/gas-giants$ ls
+joel@joel-VirtualBox:~/Documents/planets/real/gas-giants$ touch jupiter.jpeg
+joel@joel-VirtualBox:~/Documents/planets/real/gas-giants$ ls
+jupiter.jpeg
+joel@joel-VirtualBox:~/Documents/planets/real/gas-giants$ touch uranus.jpeg
+joel@joel-VirtualBox:~/Documents/planets/real/gas-giants$ touch neptune.jpeg
+joel@joel-VirtualBox:~/Documents/planets/real/gas-giants$ touch uranus.jpeg
+joel@joel-VirtualBox:~/Documents/planets/real/gas-giants$ ls
+jupiter.jpeg  neptune.jpeg  uranus.jpeg
+joel@joel-VirtualBox:~/Documents/planets/real/gas-giants$ touch saturn.jpeg
+joel@joel-VirtualBox:~/Documents/planets/real/gas-giants$ ls
+jupiter.jpeg  neptune.jpeg  saturn.jpeg  uranus.jpeg
+joel@joel-VirtualBox:~/Documents/planets/real/gas-giants$ cd ..
+joel@joel-VirtualBox:~/Documents/planets/real$ ld
+ld: no input files
+joel@joel-VirtualBox:~/Documents/planets/real$ ls
+gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets/real$ ls
+gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets/real$ cd ..
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ cd real
+joel@joel-VirtualBox:~/Documents/planets/real$ ls
+gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets/real$ cd ..
+joel@joel-VirtualBox:~/Documents/planets$ ls
+fictional  inhabited  real
+joel@joel-VirtualBox:~/Documents/planets$ cd real
+joel@joel-VirtualBox:~/Documents/planets/real$ ls
+gas-giants  terrestrial
+joel@joel-VirtualBox:~/Documents/planets/real$ ls gas-giants/
+jupiter.jpeg  neptune.jpeg  saturn.jpeg  uranus.jpeg
+joel@joel-VirtualBox:~/Documents/planets/real$ cd ..
+joel@joel-VirtualBox:~/Documents/planets$ cd inhabited
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ ls
+mars.jpeg  mercury.jpeg  neptune.jpeg  saturn.jpeg  uranus.jpeg  venus.jpeg
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ rm saturn.jpeg
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ rm venus.jpeg
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ rm neptune.jpeg
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ ls
+mars.jpeg  mercury.jpeg  uranus.jpeg
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ rm urnaus.jpeg
+rm: cannot remove 'urnaus.jpeg': No such file or directory
+joel@joel-VirtualBox:~/Documents/planets/inhabited$ rm uranus.jpeg
+
+
+
+
